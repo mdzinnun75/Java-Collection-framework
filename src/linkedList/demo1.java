@@ -25,7 +25,7 @@ public class demo1 {
 		System.out.println(l);
 		System.out.println(l.size());
 		
-		//remove
+		//removing
 		l.remove(3);
 		//l.remove(100);   							//it's not allowed, it'll throw "IndexOutOfBoundsException" 
 		System.out.println("after removing: "+ l);

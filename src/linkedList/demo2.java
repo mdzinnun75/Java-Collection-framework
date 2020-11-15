@@ -28,7 +28,15 @@ public class demo2 {
 		
 		//sortings
 		Collections.sort(l);
-		System.out.println(l);
+		System.out.println("After sorting; "+l);
+		
+		//reverse sorting
+		Collections.sort(l, Collections.reverseOrder());
+		System.out.println("reverse order: "+l);
+		
+		//shufflng
+		Collections.shuffle(l);
+		System.out.println("after shufflng: "+l);
 	}
 
 }
