@@ -10,11 +10,11 @@ public class demo1 {
 
 		HashSet hs= new HashSet();	//default capacity 16, load factor .75
 		
-		HashSet hs1= new HashSet(100);	//initial capacity 100
+		//HashSet hs1= new HashSet(100);	//initial capacity 100
 		
-		HashSet hs2= new HashSet(100, (float)0.90);
+		//HashSet hs2= new HashSet(100, (float)0.90);
 		
-		HashSet<Integer> hs3= new HashSet<Integer>(); 
+		//HashSet<Integer> hs3= new HashSet<Integer>(); 
 		
 		
 		
@@ -52,6 +52,17 @@ public class demo1 {
 			System.out.println(it.next());
 		}
 		
+		
+		//new hashset
+		HashSet hs1= new HashSet();
+		hs1.addAll(hs);
+		hs1.add(10);
+		
+		System.out.println("new hashset: "+ hs1);
+		
+		//removing a collection- removeAll() method
+		hs1.removeAll(hs);
+		System.out.println("after removing hs elements: "+hs1);
 		
 	}
 
