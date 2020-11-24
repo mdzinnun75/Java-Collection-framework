@@ -5,7 +5,7 @@ import java.util.LinkedHashSet;
 public class demo1 {
 
 	public static void main(String[] args) {
-
+		//implements all the method as hashset
 		//HashSet lhs= new HashSet();
 		LinkedHashSet lhs= new LinkedHashSet();
 		//LinkedHashSet<Integer> lhs= new LinkedHashSet<Integer>();
