@@ -55,6 +55,8 @@ public class demo1 {
 		
 		//new hashset
 		HashSet hs1= new HashSet();
+		
+		//adding a collection- addAll() method
 		hs1.addAll(hs);
 		hs1.add(10);
 		
