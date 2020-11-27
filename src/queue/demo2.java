@@ -1,13 +1,13 @@
 package queue;
 
 import java.util.Iterator;
-import java.util.PriorityQueue;
+import java.util.LinkedList;
 
-public class demo1 {
+public class demo2 {
 
 	public static void main(String[] args) {
-
-		PriorityQueue q= new PriorityQueue();
+		
+		LinkedList q= new LinkedList();
 		
 		//adding elements
 		q.add("A");
@@ -15,9 +15,9 @@ public class demo1 {
 		q.add("C");
 		q.offer("C");
 		q.offer("D");
-		//q.offer(100);									//it won't work for priorityQueue, it doesn't support heterogeneous data 
+		q.offer(100);									//it works for LinkedList, it supports heterogeneous data 
 		
-		System.out.println(q);	//[A, B, C, C, D]		//duplicates are allowed, insertion order preserved
+		System.out.println(q);	//[A, B, C, C, D, 100]		//duplicates allowed, insertion order preserved
 		
 		//--> returning head element
 		System.out.println(q.element());	//A			//returns head element, if empty returns NoSuchElement
@@ -29,10 +29,10 @@ public class demo1 {
 		
 
 		//--> returning & removing head element
-		System.out.println(q.remove());					//returns & removes head element, if empty returns NoSuchElement
+		System.out.println(q.remove());		//A			//returns & removes head element, if empty returns NoSuchElement
 		System.out.println(q);
 		
-		System.out.println(q.poll());					//returns & removes head element, if empty returns Null
+		System.out.println(q.poll());		//B			//returns & removes head element, if empty returns Null
 		System.out.println(q);
 		
 		//--> returning elements using Iterator loop
@@ -44,5 +44,6 @@ public class demo1 {
 		}
 		
 	}
+	}
 
-}
+
