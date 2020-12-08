@@ -20,6 +20,11 @@ public class demo1 {
 		hm1.put(104, "Mary");
 		hm1.put(105, "tye");
 		hm1.put(104, "Ray");
+		hm1.put(null, "M");
+		hm1.put(null, "N");		//only one null key is accepted, return the last one if it has mutiple null key.
+		hm1.put(106, null);		
+		hm1.put(107, null);		//multiple null values are accepted, return every null value if it has mutiple null key.
+		
 		
 		System.out.println(hm1);		//{101=John, 102=David, 103=John, 104=Ray, 105=tye}
 		
