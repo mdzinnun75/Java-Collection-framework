@@ -28,40 +28,50 @@ public class demo1 {
 		
 		System.out.println(hm1);		//{101=John, 102=David, 103=John, 104=Ray, 105=tye}
 		
+		//retrieving value
 		System.out.println(hm1.get(105));	//tye
 		
+		//removing pair
 		hm1.remove(103);
 		System.out.println(hm1);		//{101=John, 102=David, 104=Ray, 105=tye}
 		
+		//containsKey() 
 		System.out.println(hm1.containsKey(107));		//false
 		
+		//containsValue()
 		System.out.println(hm1.containsValue("tye"));	//true
 		
+		//isEmpty()
 		System.out.println(hm1.isEmpty());				//false
 		
+		//retrieving keys & values 
 		System.out.println(hm1.keySet());				//[101, 102, 104, 105]
-		
 		System.out.println(hm1.values());				//[John, David, Ray, tye]
+		
 		
 		System.out.println(hm1.entrySet());				//[101=John, 102=David, 104=Ray, 105=tye]
 		
+		System.out.println("--------------------");
 //		for (Object i: hm1.keySet()) {
 //			System.out.print(i+"="+ hm1.get(i)+ " ");
 //			//System.out.println(hm1.get(i));
 //		}
 		
+//		System.out.println("--------------------");
 		
-//		///entry methods
+//		//returning value using enhanced for loop
 //		for(Map.Entry entry :hm1.entrySet()) {		//101 x
 //			
 //			System.out.println(entry.getKey()+ "   "+ entry.getValue());
 //		}
+//		System.out.println("--------------------");		
 		
+		//retrieving value using Iterator 
 		Set s= hm1.entrySet();
 		Iterator it= s.iterator();
 		while (it.hasNext()) {
 			
-			Map.Entry entry=(Entry) it.next();			//to store entry ojects we need to use Map.Entry 
+			Map.Entry entry= (Entry) it.next();			//to store entry ojects we need to use Map.Entry 
 			System.out.println(entry.getKey()+ "    "+ entry.getValue());
 			
 		}

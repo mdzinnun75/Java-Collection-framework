@@ -1,6 +1,7 @@
 package mapHashTable;
 
 import java.util.Hashtable;
+import java.util.Map;
 
 public class demo1 {
 	public static void main(String[] args) {
@@ -28,6 +29,58 @@ public class demo1 {
 		//removing pair
 		System.out.println("value to be removed: "+ht.remove(104));		//value to be removed: Kohen
 		System.out.println("after removing: "+ht);						//after removing: {103=Smith, 102=David, 101=John}
+		
+		//containsKey() 
+		System.out.println(ht.containsKey(101));		//true
+		System.out.println(ht.containsKey(104));		//false
+		
+		//containsValue()
+		System.out.println(ht.containsValue("John"));	//true
+		System.out.println(ht.containsValue("Y"));		//false
+		
+		//isEmpty()
+		System.out.println(ht.isEmpty());		//false
+		
+		//retrieving keys & values  
+		System.out.println(ht.keySet());
+		System.out.println(ht.values());
+		
+		
+		System.out.println("--------------------");
+		
+		//returning value using enhanced for loop
+		for (int k:ht.keySet()) {
+			System.out.println(k+ " "+ ht.get(k));
+		}
+		
+		
+		System.out.println("--------------------");
+		
+		//returning value using Map.Entry
+		for(Map.Entry entry: ht.entrySet())
+		{
+			System.out.println(entry.getKey()+ " "+ entry.getValue());
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
